@@ -25,10 +25,12 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,25 +48,14 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "pump"
         '
-        'NumericUpDown1
+        'Button3
         '
-        Me.NumericUpDown1.Increment = New Decimal(New Integer() {50, 0, 0, 0})
-        Me.NumericUpDown1.Location = New System.Drawing.Point(32, 37)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {100, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(127, 22)
-        Me.NumericUpDown1.TabIndex = 0
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {100, 0, 0, 0})
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(183, 24)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(78, 34)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "fwd"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button3.Location = New System.Drawing.Point(185, 122)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 34)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "stop"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -75,26 +66,58 @@ Partial Class Form1
         Me.Button2.Text = "back"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Button1
         '
-        Me.Button3.Location = New System.Drawing.Point(185, 122)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 34)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "stop"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(183, 24)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(78, 34)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "fwd"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Increment = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.NumericUpDown1.Location = New System.Drawing.Point(32, 37)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {5000, 0, 0, 0})
+        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {100, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(127, 22)
+        Me.NumericUpDown1.TabIndex = 0
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {1500, 0, 0, 0})
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(388, 77)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(87, 50)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "run 60 sec"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(390, 165)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(51, 17)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Label1"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -104,4 +127,6 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Label1 As Label
 End Class
